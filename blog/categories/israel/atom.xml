@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Biome Informatics]]></title>
-  <link href="http://taltman.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Israel | Biome Informatics]]></title>
+  <link href="http://taltman.github.io/blog/categories/israel/atom.xml" rel="self"/>
   <link href="http://taltman.github.io/"/>
   <updated>2016-09-14T08:40:21-07:00</updated>
   <id>http://taltman.github.io/</id>
@@ -18,25 +18,12 @@
     <link href="http://taltman.github.io/blog/2016/09/14/refuah-shleimah/"/>
     <updated>2016-09-14T08:23:50-07:00</updated>
     <id>http://taltman.github.io/blog/2016/09/14/refuah-shleimah</id>
-    <content type="html"><![CDATA[<p><img src="http://taltman.github.io/images/shimon_peres.jpg" /></p>
+    <content type="html"><![CDATA[<p><img src="/images/shimon_peres.jpg" /></p>
 
 <p>Me and Shimon Peres at Auschwitz, during March of the Living.</p>
 
 <p>We are all wishing you and your family well, and hope you have a full
 and speedy recovery.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello, World!]]></title>
-    <link href="http://taltman.github.io/blog/2016/03/15/hello/"/>
-    <updated>2016-03-15T22:26:35-07:00</updated>
-    <id>http://taltman.github.io/blog/2016/03/15/hello</id>
-    <content type="html"><![CDATA[<h1>Welcome! </h1>
-
-<p>This is my <em>personal</em> blog, where I hope to share ideas and
-hacks that others might find helpful. You can find me around the web
-on GitHub, BitBucket, and LinkedIn. Thanks for stopping by!</p>
 ]]></content>
   </entry>
   
