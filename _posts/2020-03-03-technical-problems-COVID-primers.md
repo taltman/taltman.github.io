@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technical Problems with Existing COVID-19 Primers, and An
+title: "Technical Problems with Existing COVID-19 Primers, and an
 Improved Set of Primers"
 ---
 
