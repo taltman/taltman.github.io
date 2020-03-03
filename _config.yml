@@ -23,7 +23,7 @@ email: blog-at-me.tomeraltman.net
 description: >- # this means to ignore newlines until "baseurl:"
   A blog for me to capture my thoughts and showcase my projects,
   mostly of a technical nature. Topics will be in the orbit of
-  bioinformatics, coputational biology, data science, and information
+  bioinformatics, computational biology, data science, and information
   security. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomeraltman.net" # the base hostname & protocol for your site, e.g. http://example.com
