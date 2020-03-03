@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Israel | Biome Informatics]]></title>
+  <link href="http://taltman.github.io/blog/categories/israel/atom.xml" rel="self"/>
+  <link href="http://taltman.github.io/"/>
+  <updated>2016-09-14T08:40:21-07:00</updated>
+  <id>http://taltman.github.io/</id>
+  <author>
+    <name><![CDATA[Tomer Altman]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Refuah Shleimah]]></title>
+    <link href="http://taltman.github.io/blog/2016/09/14/refuah-shleimah/"/>
+    <updated>2016-09-14T08:23:50-07:00</updated>
+    <id>http://taltman.github.io/blog/2016/09/14/refuah-shleimah</id>
+    <content type="html"><![CDATA[<p><img src="/images/shimon_peres.jpg" /></p>
+
+<p>Me and Shimon Peres at Auschwitz, during March of the Living.</p>
+
+<p>We are all wishing you and your family well, and hope you have a full
+and speedy recovery.</p>
+]]></content>
+  </entry>
+  
+</feed>
