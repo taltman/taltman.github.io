@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technical Problems with Existing COVID-19 Primers, and an
+title: "Technical Problems with Existing CDC COVID-19 Primers, and an
 Improved Set of Primers"
 ---
 
@@ -24,7 +24,7 @@ candidate primers that pass stringent design criteria, and have a better
 demonstrated performance than the existing COVID-19 primers from the
 CDC. I provide the candidate primers for free, under a Creative
 Commons license (download
-[here](/assets/new-COVID-primer-set-stats.csv)). Lastly I identify
+[here](/assets/new-COVID-primer-set-stats.xlsx)). Lastly I identify
 next steps in this project.
 
 My hope is that this will help start a conversation about the design
@@ -176,11 +176,11 @@ Here is the formatted analysis summary from Primer3 for N3:
 # New Candidate Primers
 
 The set of candidate primers can be downloaded
-[here](/assets/new-COVID-primer-set-stats.csv). These are released as
+[here](/assets/new-COVID-primer-set-stats.xlsx) in XLSX spreadsheet format, and [here](/assets/new-COVID-primer-set-stats.csv) as a tab-delimited text "CSV" file. These are released as
 [Creative Commons Attribution 4.0 International 4.0 (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/). I recommend
 focusing on the top ten primer-probe sets, as they have the greatest
-measured accuracy.
+performance (based on the F1-score).
 
 Below find selected details about how the primers were designed and
 validated using an 'e-PCR' approach.
