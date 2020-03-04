@@ -4,7 +4,7 @@ title: "Technical Problems with Existing COVID-19 Primers, and an
 Improved Set of Primers"
 ---
 
-[My apologies in advance if this write-up is not polished, as it was written in haste. -TA]
+[My apologies in advance for the draft quality of this post, as it was written in haste. -TA]
 
 # Summary
 
