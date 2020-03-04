@@ -8,10 +8,17 @@ Improved Set of Primers"
 
 # Summary
 
-I review technical problems with the CDC COVID-19 primers and I describe how I 
-generated a new set of primers and probes without those problems. The
-ten best primer-probe pairs have perfect classification performance
-(recall, precision, and F1-score all 1.0).
+In this post I review technical problems with the CDC COVID-19 primers
+and I describe how I generated a new set of primers and probes without
+those problems. The ten best primer-probe pairs have perfect
+classification performance (recall, precision, and F1-score all
+1.0). Note that this was based on available outbreak whole-genome
+sequence data obtained from the [NCBI Blast NT
+database](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download),
+downloaded from NCBI on 2020-03-02. I will try to re-run this pipeline
+every few days to update the set of candidate primers in light of
+newly-available sequence data. Please check these primers yourself
+before using them for the basis of any diagnostic kit.
 
 This blog post strives to describe a problem with some of the COVID-19
 primer-probe sets that are being promoted for the development of
@@ -175,8 +182,10 @@ Here is the formatted analysis summary from Primer3 for N3:
 
 # New Candidate Primers
 
-The set of candidate primers can be downloaded
-[here](/assets/new-COVID-primer-set-stats.xlsx) in XLSX spreadsheet format, and [here](/assets/new-COVID-primer-set-stats.csv) as a tab-delimited text "CSV" file. These are released as
+The set of candidate primers (last generated on 2020-03-02) can be downloaded
+[here](/assets/new-COVID-primer-set-stats.xlsx) in XLSX spreadsheet
+format, and [here](/assets/new-COVID-primer-set-stats.csv) as a
+comma-separated value ("CSV") file. These are released as
 [Creative Commons Attribution 4.0 International 4.0 (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/). I recommend
 focusing on the top ten primer-probe sets, as they have the greatest
@@ -194,16 +203,19 @@ following criteria:
 * Poly-X runs longer than four bases are not allowed
 * Check that hybridization probes do not start with G (avoid quenching)
 * Check that the GC clamp on the 3' end has one or two G's or C's
-* GC% range between 40 and 60, with an optimum at 60
+* GC% range between 40 and 60, with an optimum at 50
 * Primer size range between 18 to 27 bases
 * Hybridization probe size from 75 to 200 bases
 * Disallow any hairpins, self-dimers, or oligo-interactions at ANY temperature
 * Target regions conserved perfectly among all COVID complete genomes
+  (as downloaded on 2020-03-02)
 * Exclude regions that are identical to [common cold-causing,
   human-associated coronaviruses](https://www.cdc.gov/coronavirus/general-information.html)
-* Primers designed to cover the viral RNA polymerase gene, as it is
- highly conserved (Tom Slezak, former head of biodefense program at
- LLNL, private communication)
+* Primers designed to cover the viral RNA polymerase gene, as it tends
+* to be highly conserved within an RNA viral species, and different
+  from the RNA polymerase sequence of different RNA viral species
+  (as per Tom Slezak, former head of biodefense program at
+   LLNL, private communication)
 
 
 ## Primer Performance Validation
@@ -250,6 +262,7 @@ for your time, and thanks in advance for any help that you might
 provide.
 
 TODOs:
+* Perform same analysis on WHO recommended COVID-19 primers
 * Release software pipeline code
 * Complete secondary structure code blocks for low-temperature entries
 * Fix false negative reporting bug due to NCBI Blast databases
