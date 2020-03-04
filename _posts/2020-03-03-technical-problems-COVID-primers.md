@@ -8,8 +8,8 @@ Improved Set of Primers"
 
 # Summary
 
-I review technical problems with the CDC COVID-19 primers, and I
-generated a set of new primers without those problems, and where the
+I review technical problems with the CDC COVID-19 primers and I describe how I 
+generated a new set of primers and probes without those problems. The
 ten best primer-probe pairs have perfect classification performance
 (recall, precision, and F1-score all 1.0).
 
