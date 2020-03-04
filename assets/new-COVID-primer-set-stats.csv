@@ -1,4 +1,6 @@
 # Designed by Tomer Altman. Licensed as Creative Commons Attribution 4.0 International (CC BY 4.0) https://creativecommons.org/licenses/by/4.0/,,,,,,,,,,,,,,,,,,,,,
+# This spreadsheet is documented here: https://tomeraltman.net/2020/03/03/technical-problems-COVID-primers.html,,,,,,,,,,,,,,,,,,,,,
+# The top ten primer probe sets are the best candidates for diagnostic purposes.,,,,,,,,,,,,,,,,,,,,,
 ID,FWD Primer,REV Primer,Probe,# oligo FP,# amplicon-only FP hits,# hits,# TP,# FP,# FN,Precision,Recall,F1 Score,Avg mismatches,Avg extra amplicons,Avg extra probe hybs,Pair Penalty,FWD Penalty,REV Penalty,Probe Penalty,FP IDs,FN IDs
 NC_045512.2:15882-17000~strand+~primerset-14,CCCAGATCCATCAAGAATCCTA,TGATTAGGATGTTTAGTAAGTGGGT,TGGTACACTTATGATTGAACGGTT,464,0,41,41,0,5,1,0.891304,0.942529,0,0,0,5.337066,4.557167,0.7799,4.139416,,"MN908947.3,MT020880.1,MT020881.1,MN988669.1,MT027063.1"
 NC_045512.2:15882-17000~strand+~primerset-15,CCCAGATCCATCAAGAATCCTA,CTGATTAGGATGTTTAGTAAGTGGGT,TGGTACACTTATGATTGAACGGTT,464,0,41,41,0,5,1,0.891304,0.942529,0,0,0,5.706286,4.557167,1.14912,4.139416,,"MN908947.3,MT020880.1,MT020881.1,MN988669.1,MT027063.1"

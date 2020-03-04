@@ -4,15 +4,14 @@ title: "Technical Problems with Existing CDC COVID-19 Primers, and an
 Improved Set of Primers"
 ---
 
-[My apologies in advance for the draft quality of this post, as it was written in haste. -TA]
 
-# Summary
+## Summary
 
 In this post I review technical problems with the CDC COVID-19 primers
 and I describe how I generated a new set of primers and probes without
-those problems. The ten best primer-probe pairs have perfect
-classification performance (recall, precision, and F1-score all
-1.0). Note that this was based on available outbreak whole-genome
+those problems. 
+
+Note that this was based on available outbreak whole-genome
 sequence data obtained from the [NCBI Blast NT
 database](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download),
 downloaded from NCBI on 2020-03-02. I will try to re-run this pipeline
@@ -20,28 +19,28 @@ every few days to update the set of candidate primers in light of
 newly-available sequence data. Please check these primers yourself
 before using them for the basis of any diagnostic kit.
 
-This blog post strives to describe a problem with some of the COVID-19
-primer-probe sets that are being promoted for the development of
-diagnostics. I describe the issues in terms of the primer design
-process, and with regards to validating the performance of the
-existing primers using 'e-PCR'.
+This blog post describes technical problems with some of the COVID-19
+primer-probe sets that are being promoted by the CDC to diagnose cases
+of COVID-19 infections. Several of these primers have dimerization and
+hairpin loop issues, among others. Here, I describe a bioinformatic pipeline to design better
+candidate primers that pass stringent design criteria. Using this
+pipeline, I generated a new set of primers and probes without the
+aforementioned technical issues of the CDC COVID-19 primer probe sets,
+and tested their *in silico* precision and recall using the most
+recent set of COVID-19 complete genomes from NCBI. The ten best primer-probe pairs have perfect
+classification performance (recall, precision, and F1-score all
+1.0). I provide these [candidate primers](/assets/new-COVID-primer-set-stats.xlsx) for free, under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0)
+license](https://creativecommons.org/licenses/by/4.0/).
 
-I then go on to develop a bioinformatic pipeline to design better
-candidate primers that pass stringent design criteria, and have a better
-demonstrated performance than the existing COVID-19 primers from the
-CDC. I provide the candidate primers for free, under a Creative
-Commons license (download
-[here](/assets/new-COVID-primer-set-stats.xlsx)). Lastly I identify
-next steps in this project.
-
-My hope is that this will help start a conversation about the design
-process for these critical diagnostic primers. Perhaps starting with
+My hope is that this blog post will help start a conversation about the design
+process for these critical diagnostic primers. Starting with
 these primers, and with input from other scientists, we can develop a
 set of candidate primers for COVID-19 that could be used by health
 agencies and private diagnostic kit manufacturers alike to not only
 generate more diagnostic kits, but *better* ones.
 
-# Primer Design Issues
+## Primer Design Issues
 
 As the COVID-19 pandemic spread from country-to-country over the past
 month, I felt that I should try to help in some way. I had recently
@@ -62,7 +61,7 @@ predicting performant primer probe sets using thermodynamic
 calculations, I analyzed the three N gene primer probe sets. I found
 the following problems with each set:
 
-## N1
+# N1
 
 Here is primer probe set N1, shown in Boulder format (as used by
 Primer3):
@@ -71,7 +70,10 @@ Primer3):
     SEQUENCE_INTERNAL_OLIGO=ACCCCGCATTACGTTTGGTGGACC
     SEQUENCE_PRIMER_REVCOMP=TCTGGTTACTGCCAGTTGAATCTG
 
-Here is the formatted analysis summary from Primer3 for N1:
+Here is the formatted analysis summary from Primer3 for N1 (note that
+in the terminology of Primer3, the forward primer is termed "Left",
+the reverse primer is termed "Right", and the hybridization probe is
+termed "Internal Oligo"):
 
     OLIGO            start  len      tm     gc%  any_th  3'_th hairpin seq
     LEFT PRIMER      28286   20   58.32   45.00    0.00   0.00    0.00 GACCCCAAAATCAGCGAAAT
@@ -123,7 +125,7 @@ Hybridization probe 3' hairpin loop:
     3' CCAGGTGGTTTGCAT*
 
 
-## N2
+# N2
 
 Here is set N2:
 
@@ -150,7 +152,7 @@ Here is the formatted analysis summary from Primer3 for N2:
 Primer3 found self-dimer and hairpin loop issues with all of the
 oligos in the N2 primer-probe set, though at lower temeratures.
 
-## N3
+# N3
 
 Here is set N3:
 
@@ -158,8 +160,9 @@ Here is set N3:
     SEQUENCE_INTERNAL_OLIGO=ATCACATTGGCACCCGCAATCCTG
     SEQUENCE_PRIMER_REVCOMP=TGTAGCACGATTGCAGCATTG
 
-It has a four 'A' run at the 3' end of the forward primer. It also had
-a predicted hairpin loop:
+The forward primer lacks an adequate 3' end GC clamp to stabilize
+end-to-end hybridization (optimally there should be one or two G's or
+C's in the last five bases). It also had a predicted hairpin loop:
 
     SEQUENCE_ID=CDC-N3-COVID-19
     Reverse primer:
@@ -180,9 +183,35 @@ Here is the formatted analysis summary from Primer3 for N3:
     PRODUCT SIZE: 67, PAIR ANY_TH COMPL: 0.00, PAIR 3'_TH COMPL: 0.00
 
 
-# New Candidate Primers
+## Developing New Candidate Primers
 
-The set of candidate primers (last generated on 2020-03-02) can be downloaded
+# Primer Design Criteria
+
+In order to design better-performing COVID-19 primers, I developed a
+bioinformatic pipeline that generates primers using the following
+criteria:
+
+* Target regions conserved perfectly among all COVID complete genomes
+  (41 downloaded on 2020-03-02; check [NCBI Nucleotide](https://www.ncbi.nlm.nih.gov/nuccore/?term=txid2697049%5BOrganism%3Anoexp%5D+%22complete+genome%22) for the current list)
+* Poly-X runs longer than four bases are not allowed
+* Check that hybridization probes do not start with G (avoid quenching)
+* Check for GC clamp on the forward and reverse primers (3' end has
+  one or two G's or C's in last five base pairs)
+* GC% range between 40 and 60, with an optimum at 50
+* Primer and probe size range between 18 to 27 bases
+* Amplicon size from 75 to 200 bases
+* Disallow any hairpins, self-dimers, or oligo-interactions at ANY temperature
+* Exclude regions that are identical to [the four known common cold-causing,
+  human-associated coronaviruses(229E, NL63, OC43, and HKU1)](https://www.cdc.gov/coronavirus/general-information.html)
+* Primers designed to cover the viral RNA polymerase gene, as it tends
+  to be highly conserved within an RNA viral species, and different
+  from the RNA polymerase sequence of different RNA viral species
+  (as per Tom Slezak, former head of biodefense program at
+   LLNL, private communication)
+
+# The New Candidate Primers Files
+
+The set of 55 candidate primers (last generated on 2020-03-02) can be downloaded
 [here](/assets/new-COVID-primer-set-stats.xlsx) in XLSX spreadsheet
 format, and [here](/assets/new-COVID-primer-set-stats.csv) as a
 comma-separated value ("CSV") file. These are released as
@@ -195,49 +224,28 @@ Below find selected details about how the primers were designed and
 validated using an 'e-PCR' approach.
 
 
-## Primer Design Criteria
-
-I developed a bioinformatic pipeline that generates primers, using the
-following criteria:
-
-* Poly-X runs longer than four bases are not allowed
-* Check that hybridization probes do not start with G (avoid quenching)
-* Check that the GC clamp on the 3' end has one or two G's or C's
-* GC% range between 40 and 60, with an optimum at 50
-* Primer size range between 18 to 27 bases
-* Hybridization probe size from 75 to 200 bases
-* Disallow any hairpins, self-dimers, or oligo-interactions at ANY temperature
-* Target regions conserved perfectly among all COVID complete genomes
-  (as downloaded on 2020-03-02)
-* Exclude regions that are identical to [common cold-causing,
-  human-associated coronaviruses](https://www.cdc.gov/coronavirus/general-information.html)
-* Primers designed to cover the viral RNA polymerase gene, as it tends
-* to be highly conserved within an RNA viral species, and different
-  from the RNA polymerase sequence of different RNA viral species
-  (as per Tom Slezak, former head of biodefense program at
-   LLNL, private communication)
-
-
-## Primer Performance Validation
+# Primer Performance Validation *in silico*
 
 Even if you design your primers using recommended settings with
 trusted software like Primer3, there's still the chance that you'll
 have off-target binding of the oligos to other stretches of DNA in
 your sample, or even off-target amplicons if a forward and reverse
 primer bind close enough to one another in the correct
-orientation. For that reason, I performed a sequence homology search
-using NCBI Blast+ against the NT database (downloaded
+orientation. For that reason, I analyzed the *in silico* performance
+of the newly designed primers to determine their predicted recall and
+precision. To do so, I performed a sequence homology search using NCBI
+Blast+ (version 2.10.0) against the NT database (downloaded
 2020-03-02). Complete genomes (whether prokaryotic or viral) where the
 forward and reverse primers, and the hybridization probe, all had
 gapless alignments with 90% or greater sequence identity, and in the
 proper orientation, were counted as a hit. I used all complete viral
 genomes in NT with NCBI Taxonomy Database identifier 2697049 (the
-identifier for the COVID-19 seuqences) as the "gold standard" for
+identifier for the COVID-19 sequences) as the "gold standard" for
 assessing the performance of these primer probe sets as diagnostics
-for COVID-19 presence (i.e., these are the sequences that the
-primers should hit without fail).
+for COVID-19 presence (i.e., these are the sequences that the primers
+should hit without fail).
 
-The generated primers show that there are five false negatives, but
+The spreadsheet shows that many of the newly-designed primers have five false negatives, but
 this is actually a bug in my current pipeline. It's due to an obscure
 detail about how NCBI represents identical genomes in its Blast
 databases. Those genomes are all identified, just under a different
@@ -245,7 +253,7 @@ identifier. So the top ten primer-probe pairs actually have perfect
 performance: precision, recall, and F1-score all 1.0.
 
 
-# Next Steps
+## Next Steps
 
 Thank you for reaching this far. My hope is that I can start up a
 conversation among scientists about how to design and validate
@@ -254,12 +262,13 @@ efficient wet-bench validation of the candidate primers. I hope this
 will lead to better, more accurate COVID-19 diagnostic kits being
 designed and successfully deployed around the country.
 
-Please feel free to follow up with me via email or Twitter. I look
-forward to constructive feedback about how to improve this analysis. I
-am working on releasing the source code for the bioinformatic
-pipeline, and writing up the methodology in more detail.  Thanks again
-for your time, and thanks in advance for any help that you might
-provide.
+Please feel free to follow up with me via email
+(blog-at-me.tomeraltman.net) or Twitter
+([@tomeraltman](https://www.twitter.com/tomeraltman)). I look forward
+to constructive feedback about how to improve this analysis. I am
+working on releasing the source code for the bioinformatic pipeline,
+and writing up the methodology in more detail.  Thanks again for your
+time, and thanks in advance for any help that you might provide.
 
 TODOs:
 * Perform same analysis on WHO recommended COVID-19 primers
@@ -267,3 +276,13 @@ TODOs:
 * Complete secondary structure code blocks for low-temperature entries
 * Fix false negative reporting bug due to NCBI Blast databases
 * Prepare technical manuscript detailing the methodology
+
+## Acknowledgments
+
+My deepest gratitude to the following individuals for helping me by
+reviewing this post:
+
+* [Tom Slezak](https://www.kpathsci.com/company)
+* [Dr. Elisabeth Bik](https://microbiomedigest.com/sample-page/in-the-news/)
+* [Dr. Michael Walker](https://www.linkedin.com/in/michael-walker-90aa2452/)
+* [Dr. David L. Dill](https://www.linkedin.com/in/david-dill-06b1524)
