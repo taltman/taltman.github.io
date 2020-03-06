@@ -160,9 +160,7 @@ Here is set N3:
     SEQUENCE_INTERNAL_OLIGO=ATCACATTGGCACCCGCAATCCTG
     SEQUENCE_PRIMER_REVCOMP=TGTAGCACGATTGCAGCATTG
 
-The forward primer lacks an adequate 3' end GC clamp to stabilize
-end-to-end hybridization (optimally there should be one or two G's or
-C's in the last five bases). It also had a predicted hairpin loop:
+The forward primer, while having a C base in the last five base positions, has it at the 5' end of that region, with a poly-A tail following. While runs of a single base of one to four base pairs in length are normally tolerated, it's worrisome to place one at the 3' rend. It also had a predicted hairpin loop:
 
     SEQUENCE_ID=CDC-N3-COVID-19
     Reverse primer:
@@ -255,7 +253,7 @@ performance: precision, recall, and F1-score all 1.0.
 
 ## Next Steps
 
-Thank you for reaching this far. My hope is that I can start up a
+Thank you for reading this far. My hope is that I can start up a
 conversation among scientists about how to design and validate
 candidate primer probes /in silico/, to allow for faster and more
 efficient wet-bench validation of the candidate primers. I hope this
@@ -286,3 +284,9 @@ reviewing this post:
 * [Dr. Elisabeth Bik](https://microbiomedigest.com/sample-page/in-the-news/)
 * [Dr. Michael Walker](https://www.linkedin.com/in/michael-walker-90aa2452/)
 * [Dr. David L. Dill](https://www.linkedin.com/in/david-dill-06b1524)
+
+## Updates
+
+* *[2020-03-06]* Incorporated suggestions and fixes from Nathan Walsh
+  and Nora Callahan. Thanks!
+
