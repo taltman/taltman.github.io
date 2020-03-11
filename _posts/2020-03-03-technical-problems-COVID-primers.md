@@ -29,7 +29,7 @@ aforementioned technical issues of the CDC COVID-19 primer probe sets,
 and tested their *in silico* precision and recall using the most
 recent set of COVID-19 complete genomes from NCBI. The ten best primer-probe pairs have perfect
 classification performance (recall, precision, and F1-score all
-1.0). I provide these [candidate primers](/assets/new-COVID-primer-set-stats.xlsx) for free, under the
+1.0). I provide these [candidate primers](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.xlsx) for free, under the
 [Creative Commons Attribution 4.0 International (CC BY 4.0)
 license](https://creativecommons.org/licenses/by/4.0/).
 
@@ -209,9 +209,9 @@ criteria:
 
 # The New Candidate Primers Files
 
-The set of 55 candidate primers (last generated on 2020-03-02) can be downloaded
-[here](/assets/new-COVID-primer-set-stats.xlsx) in XLSX spreadsheet
-format, and [here](/assets/new-COVID-primer-set-stats.csv) as a
+The set of candidate primers (last generated on 2020-03-11) can be downloaded
+[here](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.xlsx) in XLSX spreadsheet
+format, and [here](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.csv) as a
 comma-separated value ("CSV") file. These are released as
 [Creative Commons Attribution 4.0 International 4.0 (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/). I recommend
@@ -273,6 +273,7 @@ TODOs:
 * Release software pipeline code
 * Complete secondary structure code blocks for low-temperature entries
 * Fix false negative reporting bug due to NCBI Blast databases
+  **[FIXED: see update post]**
 * Prepare technical manuscript detailing the methodology
 
 ## Acknowledgments
@@ -287,6 +288,10 @@ reviewing this post:
 
 ## Updates
 
-* *[2020-03-06]* Incorporated suggestions and fixes from Nathan Walsh
+* **[2020-03-06]** Incorporated suggestions and fixes from Nathan Walsh
   and Nora Callahan. Thanks!
 
+* **[2020-03-11]** Released latest version of COVID-19 candidate
+    primers. Updated file links. See [this update post](https://tomeraltman.net/2020/03/11/COVID-19-candidate-primers-update.html) for more
+    information.
+    
