@@ -33,7 +33,7 @@ version of the candidate primers. Here is a summary of the updates:
   columns](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/doc/column-descriptions.md)
   in the spreadsheet report.
 
-* A FASTA file of COVID-19 primer-probe sets that are currenlty
+* A [FASTA file of COVID-19 primer-probe sets](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/kit-primers/all-COVID-19-kit-primers.fasta) that are currenlty
   deployed in testing kits.
 
 * Fixing of the NCBI Blast database sequence identifier issue (see
