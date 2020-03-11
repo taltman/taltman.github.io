@@ -29,7 +29,7 @@ aforementioned technical issues of the CDC COVID-19 primer probe sets,
 and tested their *in silico* precision and recall using the most
 recent set of COVID-19 complete genomes from NCBI. The ten best primer-probe pairs have perfect
 classification performance (recall, precision, and F1-score all
-1.0). I provide these [candidate primers](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.xlsx) for free, under the
+1.0). I provide these [candidate primers](https://bitbucket.org/tomeraltman/covid-19-primer-data/downloads/new-COVID-primer-set-stats_v2.xlsx) for free, under the
 [Creative Commons Attribution 4.0 International (CC BY 4.0)
 license](https://creativecommons.org/licenses/by/4.0/).
 
@@ -210,8 +210,8 @@ criteria:
 # The New Candidate Primers Files
 
 The set of candidate primers (last generated on 2020-03-11) can be downloaded
-[here](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.xlsx) in XLSX spreadsheet
-format, and [here](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.csv) as a
+[here](https://bitbucket.org/tomeraltman/covid-19-primer-data/downloads/new-COVID-primer-set-stats_v2.xlsx) in XLSX spreadsheet
+format, and [here](https://bitbucket.org/tomeraltman/covid-19-primer-data/downloads/new-COVID-primer-set-stats_v2.csv) as a
 comma-separated value ("CSV") file. These are released as
 [Creative Commons Attribution 4.0 International 4.0 (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/). I recommend

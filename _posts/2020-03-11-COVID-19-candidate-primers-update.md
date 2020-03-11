@@ -14,7 +14,7 @@ version of the candidate primers. Here is a summary of the updates:
   allowing easy sharing among bioinformaticists. Feel free to fork &
   send me pull requests to make this resources better.
 
-* [Latest spreadsheet report (version 2)](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/primer-candidate-reports/new-COVID-primer-set-stats_v2.xlsx) with recommended candidate primers
+* [Latest spreadsheet report (version 2)](https://bitbucket.org/tomeraltman/covid-19-primer-data/downloads/new-COVID-primer-set-stats_v2.xlsx) with recommended candidate primers
   highlighted in green (marginal primers highlighted in yellow).
 
 * Added many additional columns to the report to help in candidate
