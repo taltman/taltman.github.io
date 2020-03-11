@@ -33,6 +33,13 @@ version of the candidate primers. Here is a summary of the updates:
   columns](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/doc/column-descriptions.md)
   in the spreadsheet report.
 
+* Added the [Primer3 parameter file](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/metadata/p3-new-COVID-19-parameters.txt), so that everyone can see the
+  choice of parameter settings used for generating these primers. Of
+  course there's no one-size-fits-all, as different kits will be run
+  on different machines, and thus there will be a need to modify the
+  parameters to fit the given protocol. I welcome feedback on how I
+  can create additional parameter files for various protocols.
+
 * A [FASTA file of COVID-19 primer-probe sets](https://bitbucket.org/tomeraltman/covid-19-primer-data/src/master/kit-primers/all-COVID-19-kit-primers.fasta) that are currenlty
   deployed in testing kits.
 
