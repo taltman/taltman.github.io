@@ -160,7 +160,7 @@ Here is set N3:
     SEQUENCE_INTERNAL_OLIGO=ATCACATTGGCACCCGCAATCCTG
     SEQUENCE_PRIMER_REVCOMP=TGTAGCACGATTGCAGCATTG
 
-The forward primer, while having a C base in the last five base positions, has it at the 5' end of that region, with a poly-A tail following. While runs of a single base of one to four base pairs in length are normally tolerated, it's worrisome to place one at the 3' rend. It also had a predicted hairpin loop:
+The forward primer, while having a C base in the last five base positions, has it at the 5' end of that region, with a poly-A tail following. While runs of a single base of one to four base pairs in length are normally tolerated, it's worrisome to place one at the 3' end. It also had a predicted hairpin loop:
 
     SEQUENCE_ID=CDC-N3-COVID-19
     Reverse primer:
