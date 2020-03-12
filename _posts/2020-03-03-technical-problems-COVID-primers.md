@@ -172,13 +172,13 @@ The forward primer, while having a C base in the last five base positions, has i
 Here is the formatted analysis summary from Primer3 for N3:
 
     OLIGO            start  len      tm     gc%  any_th  3'_th hairpin seq
-    LEFT PRIMER      29163   20   58.75   40.00    0.00   0.00   34.76 TTACAAACATTGGCCGCAAA
-    RIGHT PRIMER     29229   18   60.10   55.56   12.76   0.00   36.75 GCGCGACATTCCGAAGAA
-    INTERNAL OLIGO   29187   23   68.15   56.52    8.63   0.00   49.09 ACAATTTGCCCCCAGCGCTTCAG
+    LEFT PRIMER      28680   22   60.53   45.45    0.00   0.00    0.00 GGGAGCCTTGAATACACCAAAA
+    RIGHT PRIMER     28751   21   61.50   47.62    0.00   0.00   53.84 TGTAGCACGATTGCAGCATTG
+    INTERNAL OLIGO   28703   24   67.77   54.17    0.00   0.00   41.98 ATCACATTGGCACCCGCAATCCTG
     SEQUENCE SIZE: 29902
     INCLUDED REGION SIZE: 29902
     
-    PRODUCT SIZE: 67, PAIR ANY_TH COMPL: 0.00, PAIR 3'_TH COMPL: 0.00
+    PRODUCT SIZE: 72, PAIR ANY_TH COMPL: 0.00, PAIR 3'_TH COMPL: 0.00
 
 
 ## Developing New Candidate Primers
@@ -294,4 +294,6 @@ reviewing this post:
 * **[2020-03-11]** Released latest version of COVID-19 candidate
     primers. Updated file links. See [this update post](https://tomeraltman.net/2020/03/11/COVID-19-candidate-primers-update.html) for more
     information.
-    
+
+* **[2020-03-12]** The formatted analysis summary for N3 was
+    accidentally copied from N2. Fixed.
