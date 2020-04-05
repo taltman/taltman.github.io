@@ -27,8 +27,8 @@ unless otherwise noted. One complication I encountered with the
 expanded set of primers was the presence of ambiguous bases in some
 oligos, sometimes more than one per oligo. This is an issue as Primer3
 cannot analyze such sequences. This was handled by expanding such
-sequences into all implicit combinations of unambigous bases, and
-using Primer3 to analyse the sequences. In the results table, you will
+sequences into all implicit combinations of unambiguous bases, and
+using Primer3 to analyze the sequences. In the results table, you will
 note the ID sub-field of "subset": "subset-0" means that the original
 sequence was used as-is; "subset-N" for N=1,2,3,... represented
 enumerated sequences from the original sequence with ambiguous bases.
@@ -57,8 +57,8 @@ I included the control primer-probe set targeting the RdRP gene:
 
 ### China
 
-* China-N: A high-temerature hairpin loop in the reverse primer
-* China-N: A high-temerature hairpin loop in the hybridization probe
+* China-N: A high-temperature hairpin loop in the reverse primer
+* China-N: A high-temperature hairpin loop in the hybridization probe
 * China-N: The hybridization probe's Tm is not at least 6 degrees Celsius higher than the primers' Tm
 * ORF1ab: The hybridization probe has a high-temperature hairpin loop
 
@@ -69,7 +69,7 @@ I included the control primer-probe set targeting the RdRP gene:
 * EU-Drosten-N's probe Tm is not at least 6 degrees Celsius higher than the primers' Tm
 * EU-Drosten-RdRP-P1 and EU-Drosten-RdRP-P2: forward primer has five out of five 3' bases as G/C (GC clamp)
 * EU-Drosten-RdRP-P1 probe: 20 out of 32 sequences have high-temperature hairpin loops
-* EU-Drosten-RdRP-P1: 28 out of 32 explicit primer-probe sets have less than 6 degrees Celsius difference between prome Tm and primer Tm
+* EU-Drosten-RdRP-P1: 28 out of 32 explicit primer-probe sets have less than 6 degrees Celsius difference between probe Tm and primer Tm
 * EU-Drosten-RdRP-P2 probe: has a very high hairpin loop Tm of 79.14 degrees Celsius
 * EU-Drosten-RdRP-P2: explicit primer-probe sets have less than 6 degrees Celsius difference between probe Tm and primer Tm
 
@@ -78,10 +78,10 @@ I included the control primer-probe set targeting the RdRP gene:
 * HKU-ORF-1b forward primer: 8 out of 16 explicit sequences have high hairpin loop Tm
 * HKU-N forward primer: high hairpin loop Tm
 * HKU-ORF-1b reverse primer: four out of five 3' bases are G/C (GC clamp)
-* HKU-N probe: First 5' base is G (interferes with fluoresence)
+* HKU-N probe: First 5' base is G (interferes with fluorescence)
 * HKU-ORF-1b probe: 8 out of 16 explicit sequences have high temperature hairpin loops
 * HKU-N probe: high temperature hairpin loop
-* HKU-ORF-1b & HKU-N: all explicity primer-probe sets have less than 6 degrees Celsius difference between probe Tm and primer Tm
+* HKU-ORF-1b & HKU-N: all explicitly primer-probe sets have less than 6 degrees Celsius difference between probe Tm and primer Tm
 
 ### Japan
 
@@ -99,7 +99,7 @@ primer-probe sets shows that many other countries have similar issues
 as the CDC primer-probe sets. While there is no guarantee that a
 theoretically-optimal primer-probe set will perform well /in vitro/
 (and, conversely, there are many "flawed" primer probe sets in various
-applications that have been observed to work well in pratice), it is
+applications that have been observed to work well in practice), it is
 inefficient to ignore these common pitfalls. This is because it only
 takes seconds for tools like Primer3 to screen these primer-probe sets
 for common flaws, while it takes significantly more time and resources
