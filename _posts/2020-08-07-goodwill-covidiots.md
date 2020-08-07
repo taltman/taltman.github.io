@@ -13,7 +13,9 @@ San Francisco. There was a "supervisor" who waved me in. Despite
 there being only one car in the parking lot, he had me park *right*
 behind that car. It seemed too close, but I figured that I could keep
 6 ft. of separation as long as the people in front of me didn't come
-near my trunk, where I would be unloading ~10 bags. 
+near my trunk, where I would be unloading ~10 bags. Sensing that this
+would not be a fast drop-off, I donned my N95, and put a bandanna over
+it as well to cover the exhaust valve.
 
 The first thing that I noticed was that, while having masks, many of
 the workers, including the supervisor, didn't cover their nose with
