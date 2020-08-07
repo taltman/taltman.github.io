@@ -32,7 +32,7 @@ perspective, would be a low-risk quick drop-off of goods, to something
 that would require you to spend a fair amount of time unpacking your
 bags, and sorting by walking around the parking lot, which was quickly
 filling up behind me with more cars. It would be increasingly hard to
-maneouver around the bins and cars while maintaining 6 feet of
+maneuver around the bins and cars while maintaining 6 feet of
 separation between the workers and other donors milling about.
 
 While I was asking the supervisor (the one with bare nostrils) about
