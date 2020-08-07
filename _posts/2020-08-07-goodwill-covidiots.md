@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "COVIDiots at SF GoodWill
+title: "COVIDiots at SF GoodWill"
 ---
 
 I don't normally like complaining on the Internet, but I felt that
