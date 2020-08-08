@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "COVIDiots at SF GoodWill"
+title: "Lack of COVID-19 risk mitigation at SF GoodWill"
+hidden: true
 ---
 
 I don't normally like complaining on the Internet, but I felt that
