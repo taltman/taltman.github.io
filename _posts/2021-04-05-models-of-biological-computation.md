@@ -3,18 +3,20 @@ layout: post
 title: "Train of Thought: Models of Bio-Computation"
 ---
 
-This morning I read Scott Aaronson's post musing on the computational
-expressiveness of his son's toy train set. This immediately triggered
-for me a flood of memories about my undergraduate days at Cal, where
-Scott and I overlapped for a few years (while he was younger than me,
-he was already in grad school). While there, I had the great fortune
-of being a researcher in Adam Arkin's computational biology lab, where
-I could soak up mind-expanding ideas from the grad students,
-post-docs, and staff researchers about biological computing[^dnacompute], and
-computing about biology.
+This morning I read [Scott Aaronson's post musing on the computational
+expressiveness of his son's toy train
+set](https://www.scottaaronson.com/blog/?p=5402). This immediately
+triggered for me a flood of memories about my undergraduate days at
+Cal, where Scott and I overlapped for a few years (while he was
+younger than me, he was already in grad school). While there, I had
+the great fortune of being a researcher in [Adam Arkin's computational
+biology lab](https://biosciences.lbl.gov/profiles/adam-p-arkin/),
+where I could soak up mind-expanding ideas from the grad students,
+post-docs, and staff researchers about biological
+computing[^dnacompute], and computing about biology.
 
-One area of interest was in determing what kinds of computation could
-be performed by cells or biochemical reaction networks[^turing][^fsm]. While it has
+One area of interest was in determining what kinds of computation could
+be performed by cells or biochemical reaction networks[^turing],[^fsm]. While it has
 been shown that some cells have NAND-logic-like behavior[^NAND], it seemed
 that this was limiting, because there are only so many genes in a cell
 with that kind of behavior, and there are many other tricks up the
@@ -51,13 +53,13 @@ and authors, I came across some related pages/articles:
 * [Computing With Trains - Turing's Trains](https://www.i-programmer.info/news/112-theory/12067-computing-with-trains-turings-trains.html)
 * [Article: Trains of Thought](bit-player.org/wp-content/extras/bph-publications/AmSci-2007-03-Hayes-trains.pdf)
 
-Hopefully someone will find this assembly of links amusing, or
+Hopefully someone will find this assemblage of links amusing, or
 useful.
 
 [^turing]: [Chemical Kinetics is Turing Universal](https://www.researchgate.net/publication/253809773_Chemical_Kinetics_is_Turing_Universal)
 [^fsm]: [Chemical Implementation of Finite-State Machines](https://www.researchgate.net/publication/11743809_Chemical_implementation_of_finite-state_machines)
 [^splicing]: [On the Power of Circular Splicing Systems and DNA Computability](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7963)
 [^firecracker]: [Programmable and autonomous computing machine made of biomolecules](https://pubmed.ncbi.nlm.nih.gov/11719800/)
-[^dnacompute]: [Recent Developments inDNA-Computing](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.9196)
+[^dnacompute]: [Recent Developments in DNA-Computing](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.9196)
 [^NAND]: [Cellular Gate Technology](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.36.4499)
 [^sigproc]: [Motifs and Modules in Cellular Signal Processing](https://www.researchgate.net/publication/4033212_Motifs_and_modules_in_cellular_signal_processing_applications_to_microbial_stress_response_pathways)
